@@ -1,13 +1,128 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.metIcon {
+  margin: px;
+  float: center;
+}
+.userIcon {
+  float: right;
+  margin-top: 3px;
+  align-items: center;
+}
+.headerDiv {
+  width: 100%;
+}
+.hamBurger {
+  width: 6rem;
+  height: 6rem;
+}
+#navbarComponent {
+  width: 100%;
+  background-size: 100%;
+}
+#navbar {
+  width: 100%;
+  background-size: 100%;
+  background-image: url(https://asmtdemo.ibridgellc.com/assets/images/Gradient.png);
+}
+body {
+  margin: 2em;
+  font-size: small;
+  font-weight: 300;
+  font-size-adjust: inherit;
+}
+#hamspan {
+  height: 500px;
+}
+.spanDiv {
+  margin-left: 30px;
+  padding-top: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.descriptionTab {
+  background-color: white;
+  float: right;
+  margin: 1.5rem;
+}
+.descriptionButton {
+  height: 8px;
+  font-size: larger;
+  width: 15px;
+  padding: 0.75em;
+  margin: 2em;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(29, 49, 203);
+  cursor: pointer;
+}
+.questionsTab {
+  margin: 10px;
+  padding-top: 20px;
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgb(60, 55, 55);
+}
+.surveyComponent {
+  width: auto;
+  padding-top: 5rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+.responseButton {
+  height: 8px;
+  font-size: larger;
+  width: 20px;
+  padding: 0.75em;
+  margin-right: 0.5em;
+  margin-top: 23em;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(29, 49, 203);
+  cursor: pointer;
+}
+.ResponseAndBackButtonDiv {
+  margin-top: -25px;
+  padding-left: 15px;
+  margin-right: 15px;
+  float: right;
+}
+hr {
+  color: black;
+  background-color: black;
+}
+.descriptionBox {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-size: large;
+  padding: 10px;
+  font-weight: 100;
+}
+.questionsButton {
+  height: 5px;
+  font-size: larger;
+  width: 20px;
+  margin-top: 30px;
+  padding: 0.75em;
+  margin-left: 0.5em;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(51, 181, 168);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.quistionBlock {
+  padding: 30px;
+  margin: 0px;
 }
