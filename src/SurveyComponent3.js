@@ -1,9 +1,9 @@
 import React, { Component, useState } from "react";
 
 import * as Survey from "survey-react";
-
 import "survey-react/modern.css";
 import "./index.css";
+import Button from "react-bootstrap";
 import OpenDescriptionBox from "./OpenDescriptionBox";
 import YetToDevelop from "./YetToDevelop";
 
@@ -39,7 +39,7 @@ class SurveyComponent3 extends Component {
         name: "bike",
         title: "What bike are you riding?",
         isRequired: true,
-        colCount: 4,
+        colCount: 1,
         choices: ["BMW", "Bajaj", "HarleyDavidson", "Yamaha", "Jawa"],
       },
       {
@@ -47,7 +47,7 @@ class SurveyComponent3 extends Component {
         name: "food",
         title: "What food do you like to eat",
         isRequired: true,
-        colCount: 4,
+        colCount: 1,
         choices: [
           "Biriyani",
           "Fried-Rice",
@@ -61,7 +61,7 @@ class SurveyComponent3 extends Component {
         name: "Phone",
         title: "Which company phone would you like to buy?",
         isRequired: true,
-        colCount: 2,
+        colCount: 1,
         choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
       },
       {
@@ -69,61 +69,17 @@ class SurveyComponent3 extends Component {
         name: "Phone",
         title: "Which company phone would you like to buy?",
         isRequired: true,
-        colCount: 2,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 2,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 2,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 2,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 4,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 4,
-        choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
-      },
-      {
-        type: "radiogroup",
-        name: "Phone",
-        title: "Which company phone would you like to buy?",
-        isRequired: true,
-        colCount: 4,
+        colCount: 1,
         choices: ["Apple", "One-Plus", "Xiomi", "Moto", "Nokia"],
       },
       {
         type: "matrix",
         name: "survey",
         title: "Answer all the question below, Please",
+        /* minWidth: "620px",
+         maxWidth: "720px",*/
+        /*   width: "600px", */
+        className: "col",
         columns: [
           { value: 1, text: "Strongly Agree" },
           { value: 2, text: " Agree " },
@@ -146,14 +102,15 @@ class SurveyComponent3 extends Component {
         maxRateDescription: "Completely satisfied",
       },
     ];
-    const surveyQue = new Survey.Model(questions);
+    //const surveyQue = new Survey.Model(questions);
+
     const qList = { questions };
 
     return (
       <div className="surveyComponent">
         {this.state.devInProgress && <YetToDevelop />}
         <div className="ResponseAndBackButtonDiv">
-          <span className="responseButton" onClick={yetToDevelop}>
+          <span className="responseButton m-3" onClick={yetToDevelop}>
             Edit Responses
           </span>
           <span className="responseButton" onClick={yetToDevelop}>
@@ -162,16 +119,17 @@ class SurveyComponent3 extends Component {
         </div>
         <hr></hr>
         <div className="descriptionTab">
-          <span className="descriptionButton" onClick={openDescBox}>
+          <button className="btn-darkprimary">Sample</button>
+          {/* <Button  onClick={openDescBox}>
             Description
-          </span>
-          <span className="questionsButton" onClick={takeAssessment}>
+          </Button> */}
+          <span className="" onClick={takeAssessment}>
             {" "}
             Take Assessment{" "}
           </span>
         </div>
         <div>{this.state.bool === true && <OpenDescriptionBox />}</div>
-        <table className="quistionBlock table table-striped ">
+        <table className="quistionBlock table table-striped table-responsive">
           <tbody className=" questionsTab">
             {this.state.goToAssessment && (
               <Survey.Survey model={new Survey.Model(qList)} />
